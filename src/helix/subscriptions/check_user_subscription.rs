@@ -79,14 +79,6 @@ pub struct UserSubscription {
     pub tier: types::SubscriptionTier,
 }
 
-impl Request for CheckUserSubscriptionRequest {
-    type Response = UserSubscription;
-
-    const PATH: &'static str = "subscriptions/user";
-    #[cfg(feature = "twitch_oauth2")]
-    const SCOPE: &'static [twitch_oauth2::Scope] = &[twitch_oauth2::Scope::UserReadSubscriptions];
-}
-
 impl RequestGet for CheckUserSubscriptionRequest {
     fn parse_response(
         request: Option<Self>,
