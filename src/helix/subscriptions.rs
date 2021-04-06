@@ -39,6 +39,3 @@ pub use get_broadcaster_subscriptions::{
 pub use get_broadcaster_subscriptions_events::{
     BroadcasterSubscriptionEvent, GetBroadcasterSubscriptionsEventsRequest,
 };
-
-#[doc(inline)]
-pub use check_user_subscription::{CheckUserSubscriptionRequest, UserSubscription};
